@@ -1,13 +1,15 @@
 # Code Pieces
 
-The code pieces referred from [valentineshi.dev](https://valentineshi.dev) website grouped by content type.
+The code pieces referred from my [valentineshi.dev](https://valentineshi.dev) website grouped by content type for your use.
 
 - [Puppeteer PDF Service](./niceties/puppeteer-pdf-service/)
 
 ## Cloning Subfolder Only
 
+For your purposes you may clone the desired code subfolder only. E.g. for Puppeteer PDF Service
+
 ```bash
 git clone --filter=blob:none --sparse https://github.com/valentineshi-dev/code.git
 cd code
-git sparse-checkout set <subfolder-path> # E.g. niceties/puppeteer-pdf-service for <subfolder path>
+git sparse-checkout set niceties/puppeteer-pdf-service
 ```
