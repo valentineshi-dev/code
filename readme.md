@@ -1,6 +1,8 @@
 # Code Pieces
 
-The code pieces referred from my [valentineshi.dev](https://valentineshi.dev) website grouped by content type for your use.
+The code pieces referred from my [valentineshi.dev](https://valentineshi.dev) website grouped by content type for your use. 
+
+For more OSS code refer as well to my [personal](https://github.com/WhereJuly) repository.
 
 - [Puppeteer PDF Service](./niceties/puppeteer-pdf-service/)
 
