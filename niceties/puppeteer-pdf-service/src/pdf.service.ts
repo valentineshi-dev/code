@@ -31,7 +31,8 @@ export const generatePDF = async (pdfSourceURL: string) => {
         await page.goto(pdfSourceURL, { waitUntil: 'networkidle0' });
         await page.emulateMediaType('screen');
 
-        console.timeLog('source', `Load and parse PDF source page "${pdfSourceURL}"`);
+        console.log(`Load and parse PDF source page "${pdfSourceURL}"`);
+        console.timeEnd('source');
 
         console.time('generate');
 
@@ -39,7 +40,8 @@ export const generatePDF = async (pdfSourceURL: string) => {
         const path = `./pdf-output/${filename}`;
         const pdf = await page.pdf({ path, format: 'A4' });
 
-        console.timeLog('generate', `PDF generated and saved to ${path}`);
+        console.log(`PDF generated and saved to ${path}`);
+        console.timeEnd('generate');
 
         return { pdf, filename };
     } finally {
