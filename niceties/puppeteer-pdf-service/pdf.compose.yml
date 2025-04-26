@@ -1,0 +1,19 @@
+services:
+  pdf-service:
+    build: . # Uses the Dockerfile
+    init: true
+    cap_add:
+      - SYS_ADMIN # Required for Puppeteer
+    env_file: .env  # Loads variables from .env file
+    ports:
+      - "3000:3000" # Expose API endpoint
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # volumes: # NB: Map container folder to host for debugging
+    #   - ./pdf-output:/app/pdf-output  # Map the host's ./pdf-output to the container's /app/pdf-output
+    environment:
+      - NODE_ENV=production
+    # (Optional) Mount for development (avoid in production)
+    # volumes:
+    #   - ./src:/app/src
+    #   - ./tsconfig.json:/app/tsconfig.json
