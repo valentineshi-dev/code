@@ -11,5 +11,6 @@ For your purposes you may clone the desired code subfolder only. E.g. for Puppet
 ```bash
 git clone --filter=blob:none --sparse https://github.com/valentineshi-dev/code.git
 cd code
-git sparse-checkout set niceties/puppeteer-pdf-service # Replace with actual folder you want to have locally
+# Replace `niceties/puppeteer-pdf-service` with actual folder you want to have locally
+git sparse-checkout set niceties/puppeteer-pdf-service 
 ```
