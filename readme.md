@@ -13,8 +13,11 @@ To run some code pieces Docker and Docker Compose have to be [installed](https:/
 You may clone the desired code piece subfolder only. E.g. for Puppeteer PDF Service:
 
 ```bash
-git clone --filter=blob:none --sparse https://github.com/valentineshi-dev/code.git
+git clone --no-checkout https://github.com/valentineshi-dev/code.git .
 cd code
+git fetch origin
+
 # Replace `niceties/puppeteer-pdf-service` with actual folder you want to have locally
-git sparse-checkout set niceties/puppeteer-pdf-service
+git sparse-checkout set --no-cone niceties/puppeteer-pdf-service
+git pull origin master
 ```
